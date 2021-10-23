@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Dashboard</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="uppersection">
+            <div class="box"><span class="a">9</span><br>Total Projects</div>
+            <div class="box"><span class="b">5</span><br>Completed Projects</div>
+            <div class="box"><span class="c">4</span><br>Pending Projects</div>
+            <div class="box">
+                <label for="search">Search</label> <br>
+                <input  onkeyup="onSearch()" type="text" name="text" id="text" placeholder="Search Here">
+                <button id="btn"><i class="fa fa-search" aria-hidden="true"></i></button>
+            </div>
+        </div>
+        <form onsubmit="event.preventDefault();" action="">
+            <div class="update">
+                <table id="updateTable">
+                    <tr>
+                        <th>#</th>
+                        <th>Projects</th>
+                        <th>Start Date</th>
+                        <th>Status</th>
+                        <th>Team</th>
+                        <th>Progress</th>
+                        <th>Action</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td><input class="ProjfullName" type="text" name="fullName" id="ProjfullName"></td>
+                        <td><input class="date" type="date" name="date" id="date"></td>
+                        <td><input class="status" type="text" name="status" id="status"></td>
+                        <td>
+                            <img src="4.jfif" alt="">
+                        </td>
+                        <td>Progress &nbsp;&nbsp;&nbsp;<input class="progress" type="text" name="progress" id="progress"></td>
+                        <td>
+                           <button id="savebtn" onclick="save()" type="submit" value="submit" class="savebtn">Save</button>
+                        </td>
+                    </tr>
+                </table>
+        </form>
+    </div>
+    <div class="lowersection">
+        <table id="list">
+            <tr>
+                <th>#</th>
+                <th>Projects</th>
+                <th>Start Date</th>
+                <th>Status</th>
+                <th>Team</th>
+                <th>Progress</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td id="ab">Landing Page Design</td>
+                <td id="abc">02/5/2019</td>
+                <td id="abcd">Completed</td>
+                <td>
+                    <img src="./img/4.jfif" alt="">
+                </td>
+                <td>Progress &nbsp;&nbsp;&nbsp;<span id="abcde">100%</span> </td>
+                <td>
+                  <i onclick="view()" style="margin-right: 15px;" class="fal fa-edit action"></i>
+                    <i class="fa fa-times action" aria-hidden="true"></i>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td id="1">Event Page Design</td>
+                <td id="2">04/6/2019</td>
+                <td id="3">Completed</td>
+                <td><img src="./img/8.jfif" alt=""></td>
+                <td>Progress &nbsp;&nbsp;&nbsp; <span id="4"> 100%</span></td>
+                <td>
+                    <i onclick="view1()" style="margin-right: 15px;" class="fal fa-edit action"></i>
+                    <i class="fa fa-times action" aria-hidden="true"></i>
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Netflix</td>
+                <td>06/6/2019</td>
+                <td>Pending</td>
+                <td><img src="./img/10.jfif" alt=""></td>
+                <td>Progress &nbsp;&nbsp;&nbsp; 82%</td>
+                <td>
+                    <i style="margin-right: 15px;" class="fal fa-edit action"></i>
+                    <i class="fa fa-times action" aria-hidden="true"></i>
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>CHESS Design</td>
+                <td>07/5/2019</td>
+                <td>Pending</td>
+                <td><img src="./img/4.jfif" alt=""></td>
+                <td>Progress &nbsp;&nbsp;&nbsp; 49%</td>
+                <td>
+                    <i style="margin-right: 15px;" class="fal fa-edit action"></i>
+                    <i class="fa fa-times action" aria-hidden="true"></i>
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Brand Tree Design</td>
+                <td>08/6/2019</td>
+                <td>Completed</td>
+                <td><img src="./img/8.jfif" alt=""></td>
+                <td>Progress &nbsp;&nbsp;&nbsp; 100%</td>
+                <td>
+                    <i style="margin-right: 15px;" class="fal fa-edit action"></i>
+                    <i class="fa fa-times action" aria-hidden="true"></i>
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Flow Chart Design</td>
+                <td>10/6/2019</td>
+                <td>Pending</td>
+                <td><img src="./img/5.jpg" alt=""></td>
+                <td>Progress &nbsp;&nbsp;&nbsp; 91%</td>
+                <td>
+                    <i style="margin-right: 15px;" class="fal fa-edit action"></i>
+                    <i class="fa fa-times action" aria-hidden="true"></i>
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Dashboard Desing</td>
+                <td>12/5/2019</td>
+                <td>Completed</td>
+                <td><img src="./img/8.jfif" alt=""></td>
+                <td>Progress &nbsp;&nbsp;&nbsp; 100%</td>
+                <td>
+                    <i style="margin-right: 15px;" class="fal fa-edit action"></i>
+                    <i class="fa fa-times action" aria-hidden="true"></i>
+                </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Food Express website</td>
+                <td>13/6/2019</td>
+                <td>Pending</td>
+                <td><img src="./img/9.jfif" alt=""></td>
+                <td>Progress &nbsp;&nbsp;&nbsp; 87%</td>
+                <td>
+                    <i style="margin-right: 15px;" class="fal fa-edit action"></i>
+                    <i class="fa fa-times action" aria-hidden="true"></i>
+                </td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Personal Portfolio</td>
+                <td>15/6/2019</td>
+                <td>Completed</td>
+                <td><img src="./img/2.jfif" alt=""></td>
+                <td>Progress &nbsp;&nbsp;&nbsp; 100%</td>
+                <td>
+                    <i style="margin-right: 15px;" class="fal fa-edit action"></i>
+                    <i class="fa fa-times action" aria-hidden="true"></i>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="lowermostsection"></div>
+    </div>
+</body>
+<script src="index.js"></script>
+
+</html>

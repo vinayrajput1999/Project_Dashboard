@@ -1,0 +1,78 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    background: linear-gradient(to left, rgb(166, 224, 217),  rgb(0, 224, 200));
+}
+.container{
+
+}
+.uppersection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.box{
+    border: none;
+    height: 100px;
+    margin: 30px;
+    text-align: center;
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(129, 233, 216);
+}
+#btn{
+    width: 30px;
+    height: 30px;
+    border-radius: 10px 10px;
+    cursor: pointer;
+}
+input{
+    width: 150px;
+    height: 30px;
+    border-radius: 10px;
+}
+input::placeholder{
+    text-align: center;
+    font-size: 15px;
+}
+.a:after{
+    content: "";
+}
+table{
+    width: 100%;
+    height: 200px;
+    border: none;
+    
+}
+table th{
+    font-size: 25px;
+}
+table td{
+    padding: 6px;
+    text-align: center;
+    
+}
+img{
+    width: 100px;
+    height: 40px;
+}
+#updateTable{
+    width: 100%;
+    height: 60px;
+    margin: 5px;
+    display: none;
+}
+.savebtn{
+    width: 60px;
+    height: 30px;
+    border-radius: 5px;
+}
+.savebtn:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+.action:hover{
+    cursor: pointer;
+}
